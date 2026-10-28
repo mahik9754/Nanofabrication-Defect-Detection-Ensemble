@@ -1,0 +1,6 @@
+{
+  "max_depth": 3,
+  "n_estimators": 300,
+  "learning_rate": 0.05,
+  "validation_macro_f1": 0.6007600503853626
+}

@@ -1,0 +1,76 @@
+=================================================================
+SEM DEFECT CLASSIFICATION — ENSEMBLE REPORT
+=================================================================
+Matched samples: 4591
+Ensemble: equal-weight soft voting
+Random Forest weight: 0.50
+XGBoost weight: 0.50
+Models retrained: NO
+
+1. MODEL AGREEMENT
+RF and XGBoost agree: 4489/4591 (97.78%)
+RF and XGBoost disagree: 102/4591 (2.22%)
+Ensemble differs from RF: 86 (1.87%)
+Ensemble differs from XGBoost: 16 (0.35%)
+Ensemble agrees with neither: 0
+
+2. PREDICTED CLASS DISTRIBUTION
+       RF_count  XGBoost_count  Ensemble_count  RF_pct  XGBoost_pct  Ensemble_pct
+class                                                                            
+1            39             52              50    0.85         1.13          1.09
+2             6              6               7    0.13         0.13          0.15
+3          4089           4007            4016   89.07        87.28         87.48
+4           233            297             290    5.08         6.47          6.32
+5             2              2               2    0.04         0.04          0.04
+6           222            227             226    4.84         4.94          4.92
+
+3. ENSEMBLE CONFIDENCE
+Probabilities are model estimates, not guarantees of correctness.
+Mean winning probability: 0.9700
+Median winning probability: 0.9915
+Mean top-two margin: 0.9456
+Median top-two margin: 0.9864
+Winning probability >= 50%: 4583 (99.83%)
+Winning probability >= 60%: 4540 (98.89%)
+Winning probability >= 70%: 4491 (97.82%)
+Winning probability >= 80%: 4453 (96.99%)
+Winning probability >= 90%: 4263 (92.86%)
+Top-two margin < 0.05: 6 (0.13%)
+Top-two margin < 0.10: 16 (0.35%)
+Top-two margin < 0.20: 38 (0.83%)
+
+4. MATCH WITH STORED LABELS — DESCRIPTIVE ONLY
+WARNING: these images include samples used to train one or both models.
+Do not report these as unbiased unseen-image performance.
+Random Forest: accuracy=0.9824, macro_F1=0.8709, balanced_accuracy=0.7905
+XGBoost: accuracy=0.9943, macro_F1=0.9016, balanced_accuracy=0.8540
+Ensemble: accuracy=0.9963, macro_F1=0.9221, balanced_accuracy=0.8775
+
+5. ENSEMBLE CLASSIFICATION REPORT (DESCRIPTIVE ONLY)
+              precision    recall  f1-score   support
+
+           1     1.0000    0.9091    0.9524        55
+           2     1.0000    0.8750    0.9333         8
+           3     0.9970    0.9990    0.9980      4008
+           4     0.9828    0.9862    0.9845       289
+           5     1.0000    0.5000    0.6667         4
+           6     1.0000    0.9956    0.9978       227
+
+    accuracy                         0.9963      4591
+   macro avg     0.9966    0.8775    0.9221      4591
+weighted avg     0.9963    0.9963    0.9962      4591
+
+6. CONFUSION MATRIX (rows=true class, columns=predicted class)
+[[  50    0    5    0    0    0]
+ [   0    7    1    0    0    0]
+ [   0    0 4004    4    0    0]
+ [   0    0    4  285    0    0]
+ [   0    0    1    1    2    0]
+ [   0    0    1    0    0  226]]
+
+7. OUTPUT FILES
+C:\Users\mahik\Desktop\sem_xgboost\outputs\ensemble_predictions.csv
+C:\Users\mahik\Desktop\sem_xgboost\outputs\ensemble_class_distribution.csv
+C:\Users\mahik\Desktop\sem_xgboost\outputs\ensemble_disagreement_pairs.csv
+C:\Users\mahik\Desktop\sem_xgboost\outputs\ensemble_low_confidence.csv
+C:\Users\mahik\Desktop\sem_xgboost\outputs\ensemble_summary.txt

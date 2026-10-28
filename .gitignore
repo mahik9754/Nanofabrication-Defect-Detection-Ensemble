@@ -1,0 +1,6 @@
+outputs/features/original.npz
+results/random_forest/hog_features.npz
+data/original/
+data/masks/
+data/processed_1/
+data/processed_2/
